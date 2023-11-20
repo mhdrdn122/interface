@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/style.css')}}"
+    />
+    <title>interface</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="camera">camera</div>
+      <div class="btn-control">
+        <button onclick="SendForWard()">ForWard</button>
+        <div>
+          <button onclick="SendLeft()">Left</button>
+          <button onclick="SendStop()">Stop</button>
+          <button onclick="SendRight()">Right</button>
+        </div>
+        <button onclick="SendBackWard()">BackWard</button>
+      </div>
+      <!-- <div class="mode-driver">
+            <input type="radio" name="Automatic"  id="Automatic" checked>
+            <label for="Automatic">Automatic</label>
+            <input type="radio" name="Manual"  id="Manual">
+            <label for="Manual">Manual</label>
+        </div> -->
+
+      <!-- <div>
+            <label>
+              <input class="toggle-checkbox" type="checkbox" checked />
+              <div class="toggle-switch"></div>
+            </label>
+        </div> -->
+
+      <!-- ********************************************************** -->
+      <input
+        type="range"
+        onchange="SendValue()"
+        min="0"
+        max="100"
+        step="15"
+        value="0"
+        class="speed"
+        id="speed"
+        name="speed"
+      />
+      <p id="speed-car">speed : <span id="speed-num">0 </span>km</p>
+    </div>
+
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
+  </body>
+</html>

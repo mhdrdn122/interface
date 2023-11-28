@@ -107,3 +107,38 @@ body{
   font-size: 20px;
   font-weight: bolder;
 }
+
+
+.btn-interface{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.btn-interface button{
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: capitalize;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bolder;
+  min-width: 150px;
+  text-transform: capitalize;
+}
+.btn-interface button:nth-child(3){
+  width: 250px;
+  background-color: red;
+  color: #fff;
+  transition: 0.3s;
+}
+.btn-interface button:nth-child(3):hover{
+  background-color: rgb(207, 17, 55);
+  width: 300px;
+  
+}
+.btn-interface button:hover{
+  background-color: #8682828a;
+}

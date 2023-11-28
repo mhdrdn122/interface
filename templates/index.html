@@ -13,34 +13,23 @@
     <div class="container">
       <div class="camera">camera</div>
       <div class="btn-control">
-        <button onclick="SendForWard()">ForWard</button>
-        <div>
-          <button onclick="SendLeft()">Left</button>
-          <button onclick="SendStop()">Stop</button>
-          <button onclick="SendRight()">Right</button>
-        </div>
-        <button onclick="SendBackWard()">BackWard</button>
-      </div>
-      <!-- <div class="mode-driver">
-            <input type="radio" name="Automatic"  id="Automatic" checked>
-            <label for="Automatic">Automatic</label>
-            <input type="radio" name="Manual"  id="Manual">
-            <label for="Manual">Manual</label>
-        </div> -->
 
-      <!-- <div>
-            <label>
-              <input class="toggle-checkbox" type="checkbox" checked />
-              <div class="toggle-switch"></div>
-            </label>
-        </div> -->
+        <button class="btn" onclick="SendForWard()" onmouseup="clear()" id="ForWard" >ForWard</button>
+        <div>
+          <button class="btn" onclick="SendLeft()" id="left">Left</button>
+          <button class="btn" onclick="SendStop()" id="Stop">Stop</button>
+          <button class="btn" onclick="SendRight()" id="Right">Right</button>
+        </div>
+        <button class="btn" onclick="SendBackWard()" id="BackWard">BackWard</button>
+      </div>
+      
 
       <!-- ********************************************************** -->
       <input
         type="range"
         onchange="SendValue()"
         min="0"
-        max="100"
+        max="101"
         step="15"
         value="0"
         class="speed"
@@ -48,8 +37,19 @@
         name="speed"
       />
       <p id="speed-car">speed : <span id="speed-num">0 </span>km</p>
+
+      <div class="btn-interface">
+        <button onclick="forwardLed()">ForWard_Led</button>
+        <button onclick="backwardLed()">backWard_Led</button>
+        <button onclick="power()">power</button>
+        <button onclick="buzzer()">Buzzer</button>
+        <button onclick="music()">music</button>
+        <button class="v_motor btn" onclick="V_motor()" style="width: 100%;"> v_motor</button>
+      </div>
+
     </div>
 
+  
     <script src="{{url_for('static',filename='js/script.js')}}"></script>
   </body>
 </html>

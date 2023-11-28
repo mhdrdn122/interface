@@ -156,6 +156,95 @@ def sendStop():
 
     return "success"
 
+@app.route("/forwardLed")
+def forwardLed():
+    print("forwardLed")
+
+    # ? GPIO.output(ForWard_Pin1, GPIO.LOW)
+    # ? GPIO.output(ForWard_Pin2, GPIO.LOW)
+
+    #! GPIO.output(BackWard_Pin1, GPIO.LOW)
+    #! GPIO.output(BackWard_Pin2, GPIO.LOW)
+
+    # todo Pwm_Left_Right_Pin1.stop()
+    # todo Pwm_Left_Right_Pin2.stop()
+
+    return "success"
+
+@app.route("/backwardLed")
+def backwardLed():
+    print("backwardLed")
+
+    # ? GPIO.output(ForWard_Pin1, GPIO.LOW)
+    # ? GPIO.output(ForWard_Pin2, GPIO.LOW)
+
+    #! GPIO.output(BackWard_Pin1, GPIO.LOW)
+    #! GPIO.output(BackWard_Pin2, GPIO.LOW)
+
+    # todo Pwm_Left_Right_Pin1.stop()
+    # todo Pwm_Left_Right_Pin2.stop()
+
+    return "success"
+
+@app.route("/power")
+def power():
+    print("power")
+
+    # ? GPIO.output(ForWard_Pin1, GPIO.LOW)
+    # ? GPIO.output(ForWard_Pin2, GPIO.LOW)
+
+    #! GPIO.output(BackWard_Pin1, GPIO.LOW)
+    #! GPIO.output(BackWard_Pin2, GPIO.LOW)
+
+    # todo Pwm_Left_Right_Pin1.stop()
+    # todo Pwm_Left_Right_Pin2.stop()
+
+    return "success"
+
+@app.route("/buzzer")
+def buzzer():
+    print("buzzer")
+
+    # ? GPIO.output(ForWard_Pin1, GPIO.LOW)
+    # ? GPIO.output(ForWard_Pin2, GPIO.LOW)
+
+    #! GPIO.output(BackWard_Pin1, GPIO.LOW)
+    #! GPIO.output(BackWard_Pin2, GPIO.LOW)
+
+    # todo Pwm_Left_Right_Pin1.stop()
+    # todo Pwm_Left_Right_Pin2.stop()
+
+    return "success"
+
+@app.route("/music")
+def music():
+    print("music")
+
+    # ? GPIO.output(ForWard_Pin1, GPIO.LOW)
+    # ? GPIO.output(ForWard_Pin2, GPIO.LOW)
+
+    #! GPIO.output(BackWard_Pin1, GPIO.LOW)
+    #! GPIO.output(BackWard_Pin2, GPIO.LOW)
+
+    # todo Pwm_Left_Right_Pin1.stop()
+    # todo Pwm_Left_Right_Pin2.stop()
+
+    return "success"
+
+@app.route("/V_motor")
+def V_motor():
+    print("V_motor")
+
+    # ? GPIO.output(ForWard_Pin1, GPIO.LOW)
+    # ? GPIO.output(ForWard_Pin2, GPIO.LOW)
+
+    #! GPIO.output(BackWard_Pin1, GPIO.LOW)
+    #! GPIO.output(BackWard_Pin2, GPIO.LOW)
+
+    # todo Pwm_Left_Right_Pin1.stop()
+    # todo Pwm_Left_Right_Pin2.stop()
+
+    return "success"
 
 if __name__ == "__main__":
     # app.run(debug=True, port=80)

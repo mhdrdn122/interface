@@ -1,3 +1,4 @@
+
 function SendForWard() {
     fetch('/ForWard')
 }
@@ -17,6 +18,29 @@ function SendStop() {
     fetch('/Stop')
 }
 
+function forwardLed() {
+    fetch('/forwardLed')
+}
+
+function backwardLed() {
+    fetch('/backwardLed')
+}
+
+function power() {
+    fetch('/power')
+}
+
+function buzzer() {
+    fetch('/buzzer')
+}
+
+function music() {
+    fetch('/music')
+}
+
+function V_motor() {
+    fetch('/V_motor')
+}
 
 // ************************************************************************************************************
 function SendValue() {
@@ -25,7 +49,6 @@ function SendValue() {
     var speedCar = document.getElementById("speed-car");
 
 
-    console.log(typeof(+sliderValue))
     fetch('/get_value', {
         method: 'POST',
         headers: {
@@ -45,3 +68,56 @@ function SendValue() {
     }
 
 }
+
+
+// start
+let isMouseDown = false;
+var btnActive = ''
+let btn = document.querySelectorAll('.btn')
+console.log(btn)
+
+btn.forEach( item => {
+        
+        item.addEventListener('mousedown', () => {
+        isMouseDown = true;
+        btnActive = item.innerHTML;
+
+        });
+
+        item.addEventListener('mouseup', () => {
+            isMouseDown = false;
+        });
+
+        item.addEventListener('mouseleave', () => {
+            isMouseDown = false;
+        });
+
+    })
+
+setInterval(() => {
+    if (isMouseDown) {
+        console.log(btnActive);
+        
+        if(btnActive == 'ForWard')
+        {
+            SendForWard()
+        }else if(btnActive == 'BackWard'){
+            SendBackWard()
+        }else if(btnActive == 'Left'){
+            SendLeft()
+        }else if(btnActive == 'Right'){
+            SendRight()
+        }else if( btnActive == 'Stop'){
+            SendStop()
+        }
+        else{
+            V_motor()
+        }
+        
+        
+    }
+}, 100);
+
+
+
+// end 
